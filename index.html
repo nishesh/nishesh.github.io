@@ -1,22 +1,32 @@
+<!-- template.html -->
 <html>
-  <head>
-    <title>Sample "Hello, World" Application</title>
-  </head>
-  <body bgcolor=white>
-
-    <table border="0" cellpadding="10">
-      <tr>
-        <td>
-        </td>
-        <td>
-          <h1>Sample "Hello, World" Application</h1>
-        </td>
-      </tr>
-    </table>
-
-    <p>This is the home page for the HelloWorld Web application. </p>
-    <ul>
-    </ul>
-
-  </body>
-</html>
+<head>
+  <title>Hello React</title>
+  <script src="http://fb.me/react-0.10.0.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.10.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <script type="text/jsx">
+      /**
+       * @jsx React.DOM
+       */
+      // The above declaration must remain intact at the top of the script.
+      // Your code here
+      var CommentBox = React.createClass({
+        render: function() {
+          return (
+            <div className="commentBox">
+            Hello, world! I am a CommentBox.
+            </div>
+            );
+        }
+      });
+      React.renderComponent(
+        <CommentBox />,
+        document.getElementById('content')
+        );
+      </script>
+    </body>
+    </html>
